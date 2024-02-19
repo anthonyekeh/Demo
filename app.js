@@ -49,4 +49,4 @@ app.listen(3000, () => {
 });
 
 // does nothing, pheew. changed from the repo
-// alright, final one
+// to view my ssh key: cat ~/.ssh/id_ed25519.pub
