@@ -6,5 +6,5 @@ COPY package*.json ./
 COPY . .
 RUN yarn install
 EXPOSE 3000
-CMD ["pm2", " start", "app.js"]
+CMD ["pm2-runtime", "app.js"]
 # testing: welldone, testing again
