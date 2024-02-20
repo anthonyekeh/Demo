@@ -2,8 +2,9 @@
 
 FROM node:18-alpine
 WORKDIR /app
+COPY package*.json ./
 COPY . .
-RUN yarn install --production
-CMD ["pm2", " start", "app.js"]
+RUN yarn install
 EXPOSE 3000
+CMD ["pm2", " start", "app.js"]
 # testing: welldone, testing again
