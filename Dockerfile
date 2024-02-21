@@ -2,9 +2,9 @@
 
 FROM node:18-alpine
 WORKDIR /app
-COPY package*.json ./
 COPY . .
-RUN yarn install
+RUN yarn install --production
+RUN npm i --legacy-peer-deps
+RUN npm i -g pm2 --legacy-peer-deps
 EXPOSE 3000
-CMD ["pm2-runtime", "app.js"]
-# testing: welldone, testing again
+CMD ["pm2-runtime", "start", "app.js"]
