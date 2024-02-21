@@ -1,8 +1,20 @@
-# syntax=docker/dockerfile:1
+# Use an official Node.js image with a specified version
+FROM node:14
 
-FROM node:18-alpine
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy the rest of the application code
 COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
+
+# Expose port 5001
 EXPOSE 3000
+
+# Command to run your application
+CMD ["node", "app.js"]
