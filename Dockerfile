@@ -13,7 +13,7 @@ COPY package*.json ./
 USER node
 
 
-RUN npm install
+# RUN npm install
 
 RUN npm install pm2 -g
 
