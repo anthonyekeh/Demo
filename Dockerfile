@@ -20,5 +20,4 @@ COPY --chown=node:node . .
 
 EXPOSE 3000
 
-CMD [ "pm2-runtime", "app.js" ]
-# CMD [ "node", "app.js" ]
+CMD [ "pm2-runtime", "app.js" ] 
