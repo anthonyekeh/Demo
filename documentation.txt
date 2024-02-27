@@ -1,0 +1,6 @@
+after building my image, I used the code below to run it so that it won't exit after executing shortly
+> sudo docker run --name test -p 22:3000 -d xah22/myapp
+
+`-p 22:3000`, "22" is the port my app/server was listening on, I found it when I ran the code to find out what http port my server was listening on
+> sudo netstat -tulpn | grep LISTEN
+# it gave me a list of ports my server was listening on, if I had done >> `-p 3000:3000`, the container would exit after running.
