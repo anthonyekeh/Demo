@@ -9,7 +9,7 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
-
+#using node aplrine
 USER node
 
 
